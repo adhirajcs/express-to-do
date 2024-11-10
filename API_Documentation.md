@@ -1,8 +1,4 @@
-### `API_Documentation.md`
-
 # Express To-Do API Documentation
-
----
 
 ## Authentication Routes
 
