@@ -1,7 +1,7 @@
 const { pgTable, integer, varchar, boolean, timestamp } = require("drizzle-orm/pg-core");
 const { usersTable } = require("./userSchema");
 
-const todosTable = pgTable('todos', {
+const todoTable = pgTable('todos', {
   id: integer().primaryKey().generatedAlwaysAsIdentity(),
   title: varchar({ length: 255 }).notNull(),
   description: varchar({ length: 500 }),
@@ -11,4 +11,4 @@ const todosTable = pgTable('todos', {
   updatedAt: timestamp().defaultNow().notNull(),
 });
 
-module.exports = { todosTable };
+module.exports = { todoTable };
